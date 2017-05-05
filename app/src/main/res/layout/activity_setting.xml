@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:epan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <!--浅蓝 #3f51b5   深蓝 #303f9f   草绿 #54c590  墨黑 #484848  浅白 #a9a9a9  -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="设置中心"
+        android:textColor="#ffffff"
+        android:background="#3f51b5"
+        android:textSize="22sp" />
+
+    <com.epan.mobilesafe.ui.SettingView
+        android:id="@+id/sv_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        epan:title="自动更新"
+        epan:des_on="自动更新开启"
+        epan:des_off="自动更新关闭" />
+</LinearLayout>

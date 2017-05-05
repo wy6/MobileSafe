@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#54c590"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <!--当前控件获取焦点，android:ellipsize="marquee"才会生效  -->
+    <com.epan.mobilesafe.ui.FocusedTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fefcec"
+        android:text="全面管理软件权限,保护个人隐私,预防病毒;深度管理,极客必备全面保护手机安全;细化通信管理,告别垃圾短信和骚扰电话......"
+        android:textColor="#f78346"
+        android:textStyle="italic"
+        android:singleLine="true"
+        android:ellipsize="marquee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bk_main_top">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/gv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:background="#cdc3d0"
+            android:horizontalSpacing="1dp"
+            android:verticalSpacing="1dp" />
+    </LinearLayout>
+
+</LinearLayout>
