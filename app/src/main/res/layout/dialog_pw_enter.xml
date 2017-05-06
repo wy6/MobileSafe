@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="输入密码"
+        android:textColor="#484848"
+        android:textSize="20sp"
+        android:background="@mipmap/dialog_top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff">
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/et_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="请输入密码"
+            android:textSize="16sp"
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:layout_margin="12dp"
+            android:layout_gravity="center_vertical"
+            android:background="#ffffff"/>
+
+        <ImageView
+            android:id="@+id/iv_show_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/pw_show"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@mipmap/dialog_down">
+
+        <Button
+            android:id="@+id/bt_ok"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:text="确定"
+            android:textSize="16sp"
+            android:textColor="#484848"
+            android:background="@null"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:background="#a9a9a9"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"/>
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textSize="16sp"
+            android:textColor="#484848"
+            android:background="@null"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+</LinearLayout>

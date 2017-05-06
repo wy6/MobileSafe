@@ -15,11 +15,11 @@ public class StreamUtils {
      * 把字节流转换成String
      */
     public static String parserStream(InputStream is) throws IOException {
-        BufferedReader br=new BufferedReader(new InputStreamReader(is));
+        BufferedReader br = new BufferedReader(new InputStreamReader(is));
         //写入流
-        StringWriter sw=new StringWriter();
-        String str=null;
-        while((str=br.readLine())!=null){
+        StringWriter sw = new StringWriter();
+        String str = null;
+        while ((str = br.readLine()) != null) {
             sw.write(str);
         }
 
