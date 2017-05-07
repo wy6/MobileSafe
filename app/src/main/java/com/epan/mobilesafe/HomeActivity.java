@@ -198,10 +198,9 @@ public class HomeActivity extends Activity {
                 //  获取到了配置文件中的密码
                 String password_sp = sp.getString("password", "");
                 if (MD5Utils.digestPassword(password).equals(password_sp)) {
-//                    Toast.makeText(getApplicationContext(), "输入密码正确", Toast.LENGTH_SHORT).show();
                     dialog.dismiss();
                     // 进入手机防盗界面
-                    Intent intent = new Intent(getApplicationContext(), Setup1Activity.class);
+                    Intent intent = new Intent(getApplicationContext(), LostFindActivity.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "输入密码不正确", Toast.LENGTH_SHORT).show();

@@ -48,10 +48,13 @@
             android:inputType="phone" />
 
         <Button
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/selector_contacts"
-            android:text="选择联系人" />
+            android:text="选择联系人"
+            android:textColor="#484848"
+            android:textSize="18sp"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
     <LinearLayout

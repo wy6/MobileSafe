@@ -2,7 +2,7 @@
 <!--  状态选择器 其实就是特殊的图片 根据不同的状态 显示不同的图片 -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true"
-          android:drawable="@drawable/btn_green_pressed" /> <!-- pressed -->
+          android:drawable="@drawable/btn_pressed" /> <!-- pressed -->
  
-    <item android:drawable="@drawable/btn_green_normal" /> <!-- default -->
+    <item android:drawable="@drawable/btn" /> <!-- default -->
 </selector>

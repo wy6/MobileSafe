@@ -2,7 +2,6 @@ package com.epan.mobilesafe;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -102,7 +101,9 @@ public class SplashActivity extends Activity {
                             enterHome();
                         }
                     });
-                };
+                }
+
+                ;
             }.start();
         }
     }
@@ -214,7 +215,7 @@ public class SplashActivity extends Activity {
      * 升级对话框
      */
     private void showUpdateDialog() {
-        AlertDialog.Builder builder = new Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("升级新版本: v" + code);
         builder.setIcon(R.mipmap.ic_launcher);
         builder.setMessage(des);
@@ -234,6 +235,54 @@ public class SplashActivity extends Activity {
         });
         builder.show();
     }
+
+//    private void showUpdateDialog() {
+//        new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+//                .setTitleText("更新新版本: v" + code)
+//                .setContentText(des)
+//                .setCancelText("取消")
+//                .setConfirmText("升级")
+//                .showCancelButton(true)
+//                .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+//
+//                    @Override
+//                    public void onClick(SweetAlertDialog sDialog) {
+//                        sDialog.dismiss();
+//                        enterHome();
+//
+//                        // reuse previous dialog instance, keep widget user state, reset them if you need
+////                        sDialog.setTitleText("Cancelled!")
+////                                .setContentText("Your imaginary file is safe :)")
+////                                .setConfirmText("OK")
+////                                .showCancelButton(false)
+////                                .setCancelClickListener(null)
+////                                .setConfirmClickListener(null)
+////                                .changeAlertType(SweetAlertDialog.ERROR_TYPE);
+//
+//                        // or you can new a SweetAlertDialog to show
+//                               /* sDialog.dismiss();
+//                                new SweetAlertDialog(SampleActivity.this, SweetAlertDialog.ERROR_TYPE)
+//                                        .setTitleText("Cancelled!")
+//                                        .setContentText("Your imaginary file is safe :)")
+//                                        .setConfirmText("OK")
+//                                        .show();*/
+//                    }
+//                })
+//                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+//                    @Override
+//                    public void onClick(SweetAlertDialog sDialog) {
+//                        download();
+////                        sDialog.setTitleText("Deleted!")
+////                                .setContentText("Your imaginary file has been deleted!")
+////                                .setConfirmText("OK")
+////                                .showCancelButton(false)
+////                                .setCancelClickListener(null)
+////                                .setConfirmClickListener(null)
+////                                .changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
+//                    }
+//                })
+//                .show();
+//    }
 
     /**
      * 下载安装新版本

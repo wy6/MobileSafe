@@ -77,7 +77,6 @@ public abstract class SetupBaseActivity extends Activity {
             return true;
         }
 
-
         return super.onKeyDown(keyCode, event);
     }
 
