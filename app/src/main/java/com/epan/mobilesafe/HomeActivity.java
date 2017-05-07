@@ -108,8 +108,8 @@ public class HomeActivity extends Activity {
                 .findViewById(R.id.et_password);
         final EditText et_password_confirm = (EditText) view
                 .findViewById(R.id.et_password_confirm);
-        Button btn_ok = (Button) view.findViewById(R.id.ok);
-        Button btn_cancel = (Button) view.findViewById(R.id.cancel);
+        Button btn_ok = (Button) view.findViewById(R.id.bt_ok);
+        Button btn_cancel = (Button) view.findViewById(R.id.bt_cancel);
         // 取消按钮的点击事件
         btn_cancel.setOnClickListener(new View.OnClickListener() {
 
@@ -146,7 +146,7 @@ public class HomeActivity extends Activity {
             }
         });
         dialog = builder.create();
-        dialog.setView(view,0,0,0,0);
+        dialog.setView(view, 0, 0, 0, 0);
         dialog.show();
     }
 
@@ -201,7 +201,7 @@ public class HomeActivity extends Activity {
 //                    Toast.makeText(getApplicationContext(), "输入密码正确", Toast.LENGTH_SHORT).show();
                     dialog.dismiss();
                     // 进入手机防盗界面
-                    Intent intent = new Intent(getApplicationContext(), LostFindActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), Setup1Activity.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "输入密码不正确", Toast.LENGTH_SHORT).show();
