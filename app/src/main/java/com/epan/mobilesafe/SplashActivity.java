@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,11 +27,13 @@ import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
+import com.lidroid.xutils.util.IOUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -106,6 +109,34 @@ public class SplashActivity extends Activity {
 
                 ;
             }.start();
+        }
+        copyDb();
+    }
+
+    /**
+     * 号码归属地数据库
+     */
+    private void copyDb() {
+        File file = new File(getFilesDir(), "address.db");
+        if (!file.exists()) {
+            AssetManager manager = getAssets();
+            InputStream is = null;
+            FileOutputStream fos = null;
+            try {
+                is = manager.open("address.db");
+                fos = new FileOutputStream(file);
+                byte[] bs = new byte[1024];
+                int len = -1;
+                while ((len = is.read(bs)) != -1) {
+                    fos.write(bs, 0, len);
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                IOUtils.closeQuietly(fos);
+                IOUtils.closeQuietly(is);
+            }
         }
     }
 

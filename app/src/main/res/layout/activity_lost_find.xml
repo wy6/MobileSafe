@@ -83,6 +83,8 @@
         android:background="#66000000" />
 
     <RelativeLayout
+        android:clickable="true"
+        android:onClick="resetup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
@@ -91,8 +93,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:clickable="true"
-            android:onClick="resetup"
             android:text="重置防盗设置"
             android:textColor="#484848"
             android:textSize="18sp" />
