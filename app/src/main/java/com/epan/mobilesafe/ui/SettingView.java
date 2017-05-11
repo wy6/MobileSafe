@@ -41,9 +41,9 @@ public class SettingView extends RelativeLayout {
                 "http://schemas.android.com/apk/res-auto", "des_off");
         // 对控件初始化
         tv_title.setText(title);
-        if(cb.isChecked()){
+        if (cb.isChecked()) {
             tv_des.setText(des_on);
-        }else{
+        } else {
             tv_des.setText(des_off);
         }
     }
@@ -71,9 +71,9 @@ public class SettingView extends RelativeLayout {
 
     public void setChecked(boolean isChecked) {
         cb.setChecked(isChecked);
-        if(cb.isChecked()){
+        if (cb.isChecked()) {
             tv_des.setText(des_on);
-        }else{
+        } else {
             tv_des.setText(des_off);
         }
     }

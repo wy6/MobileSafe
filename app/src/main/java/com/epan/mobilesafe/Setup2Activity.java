@@ -42,7 +42,7 @@ public class Setup2Activity extends SetupBaseActivity {
                     // 读取sim串号 保存到配置文件中
                     edit.putString("sim", simSerialNumber);
                     sv_bind.setChecked(true);
-                    Toast.makeText(Setup2Activity.this,simSerialNumber,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Setup2Activity.this, simSerialNumber, Toast.LENGTH_SHORT).show();
                 } else {
                     // 解绑
                     edit.putString("sim", "");

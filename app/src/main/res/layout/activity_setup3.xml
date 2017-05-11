@@ -44,28 +44,28 @@
             android:id="@+id/et_safenum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:hint="请输入安全号码"
-            android:inputType="phone"
-            android:layout_margin="10dp"/>
+            android:inputType="phone" />
 
         <Button
-            android:onClick="selectContacts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
             android:background="@drawable/selector_contacts"
+            android:onClick="selectContacts"
             android:text="选择联系人"
             android:textColor="#484848"
-            android:textSize="18sp"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"/>
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="60dp">
+        android:layout_marginBottom="60dp"
+        android:gravity="center">
 
         <ImageView
             android:layout_width="wrap_content"

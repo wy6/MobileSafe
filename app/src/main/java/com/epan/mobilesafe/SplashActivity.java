@@ -53,6 +53,7 @@ public class SplashActivity extends Activity {
     private TextView tv_version;
     private TextView tv_progress;
     private SharedPreferences sp;
+    private AlertDialog dialog;
 
 
     /**

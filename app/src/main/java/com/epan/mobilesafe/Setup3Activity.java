@@ -40,6 +40,7 @@ public class Setup3Activity extends SetupBaseActivity {
         intent.setType("vnd.android.cursor.dir/phone_v2");
         startActivityForResult(intent, 1);
     }
+
     // 当打开的activity 关闭的时候 就会调用这个方法
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -48,14 +49,14 @@ public class Setup3Activity extends SetupBaseActivity {
 //			String num = data.getStringExtra("num"); // null.方法
 //			et_safenum.setText(num);
 //		}
-        if(data !=null){
+        if (data != null) {
             Uri uri = data.getData();
             String num = null;
             // 创建内容解析者
             ContentResolver contentResolver = getContentResolver();
             Cursor cursor = contentResolver.query(uri,
                     null, null, null, null);
-            while(cursor.moveToNext()){
+            while (cursor.moveToNext()) {
                 num = cursor.getString(cursor.getColumnIndex("data1"));
 
             }

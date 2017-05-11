@@ -25,7 +25,7 @@ public class FocusedTextView extends TextView {
         super(context, attrs, defStyleAttr);
     }
 
-    public boolean isFocused(){
+    public boolean isFocused() {
         return true;
     }
 

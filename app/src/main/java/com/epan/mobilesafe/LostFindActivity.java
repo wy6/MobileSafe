@@ -48,9 +48,9 @@ public class LostFindActivity extends Activity {
         tv_safenum.setText(sp.getString("safenum", ""));
 
         boolean protect = sp.getBoolean("protected", false);
-        if(protect){
+        if (protect) {
             iv_protected.setImageResource(R.mipmap.lock);
-        }else{
+        } else {
             iv_protected.setImageResource(R.mipmap.unlock);
         }
     }

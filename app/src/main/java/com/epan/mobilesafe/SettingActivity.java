@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+
 import com.epan.mobilesafe.libs.StatusBarUtil;
 import com.epan.mobilesafe.ui.SettingView;
 
@@ -33,7 +34,7 @@ public class SettingActivity extends Activity {
         if (sp.getBoolean("update", true)) {
             //sv_update.setDes("自动更新开启");
             sv_update.setChecked(true);
-        }else{
+        } else {
             //sv_update.setDes("自动更新关闭");
             sv_update.setChecked(false);
         }

@@ -45,7 +45,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginTop="5dp"
             android:text="- - -"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <View
@@ -88,11 +88,11 @@
         android:layout_margin="10dp">
 
         <TextView
-            android:onClick="resetup"
-            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:clickable="true"
+            android:onClick="resetup"
             android:text="重置防盗设置"
             android:textColor="#484848"
             android:textSize="18sp" />

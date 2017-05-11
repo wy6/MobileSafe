@@ -25,10 +25,10 @@ public class Setup4Activity extends SetupBaseActivity {
         setContentView(R.layout.activity_setup4);
         ViewUtils.inject(this);
 
-        if(sp.getBoolean("protected", false)){
+        if (sp.getBoolean("protected", false)) {
             cb_protected.setChecked(true);
             cb_protected.setText("您开启了手机防盗保护");
-        }else{
+        } else {
             cb_protected.setChecked(false);
             cb_protected.setText("您没有开启手机防盗保护");
         }
@@ -41,10 +41,10 @@ public class Setup4Activity extends SetupBaseActivity {
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
                 SharedPreferences.Editor edit = sp.edit();
-                if(isChecked){
+                if (isChecked) {
                     cb_protected.setText("您开启了手机防盗保护");
                     edit.putBoolean("protected", true);
-                }else{
+                } else {
                     cb_protected.setText("您没有开启手机防盗保护");
                     edit.putBoolean("protected", false);
                 }
