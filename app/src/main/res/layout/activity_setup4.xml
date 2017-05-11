@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical" >
 
         <TextView
             android:layout_width="match_parent"
@@ -23,10 +23,20 @@
             android:textColor="#ffffff"
             android:textSize="22sp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="设置完成"
+            android:textColor="#484848"
+            android:textSize="18sp" />
+
         <CheckBox
+            android:id="@+id/cb_protected"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:text="您没有开启手机防盗保护" />
     </LinearLayout>
 
