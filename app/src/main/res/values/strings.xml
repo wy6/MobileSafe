@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">手机卫士</string>
+    <string name="sample_device_admin_description">可以一键锁屏,远程擦除数据</string>
+    <string name="sample_device_admin">手机卫士</string>
 </resources>

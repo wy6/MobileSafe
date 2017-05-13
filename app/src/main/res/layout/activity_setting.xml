@@ -25,4 +25,24 @@
         epan:des_off="自动更新关闭"
         epan:des_on="自动更新开启"
         epan:title="自动更新" />
+
+    <com.epan.mobilesafe.ui.SettingView
+        android:id="@+id/sv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        epan:des_off="号码归属地显示关闭"
+        epan:des_on="号码归属地显示开启"
+        epan:title="号码归属地显示" />
+
+    <com.epan.mobilesafe.ui.SettingClickView
+        android:id="@+id/scv_location_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.epan.mobilesafe.ui.SettingClickView
+        android:id="@+id/scv_change_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
 </LinearLayout>
