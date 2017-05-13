@@ -74,7 +74,6 @@ public class SettingActivity extends Activity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(SettingActivity.this);
-                builder.setIcon(R.drawable.ic_launcher);
                 builder.setTitle("归属地提示框风格");
                 // 参数1  字符数组 显示的内容  参数 2 默认选中的条目
                 builder.setSingleChoiceItems(items, sp.getInt("which", 0), new DialogInterface.OnClickListener() {
