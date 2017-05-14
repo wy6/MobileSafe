@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  状态选择器 其实就是特殊的图片 根据不同的状态 显示不同的图片 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+          android:drawable="@mipmap/add_pressed" /> <!-- pressed -->
+ 
+    <item android:drawable="@mipmap/add" /> <!-- default -->
+</selector>

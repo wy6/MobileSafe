@@ -42,18 +42,22 @@ public class HomeActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i) {
-                    case 0:
+                    case 0:// 手机防盗
                         if (TextUtils.isEmpty(sp.getString("password", ""))) {
                             showPwSetupDialog();
                         } else {
                             showPwEnterDialog();
                         }
                         break;
-                    case 7:
+                    case 1:// 通讯卫士
+                        Intent intent1=new Intent(HomeActivity.this, CallSmsSafeActivity.class);
+                        startActivity(intent1);
+                        break;
+                    case 7:// 高级工具
                         Intent intent7 = new Intent(HomeActivity.this, AToolsActivity.class);
                         startActivity(intent7);
                         break;
-                    case 8:
+                    case 8:// 设置中心
                         Intent intent8 = new Intent(HomeActivity.this, SettingActivity.class);
                         startActivity(intent8);
                         break;

@@ -15,6 +15,9 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
 
     <application
         android:allowBackup="true"
@@ -33,7 +36,8 @@
         </activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".SettingActivity" />
-        <activity android:name=".LostFindActivity"
+        <activity
+            android:name=".LostFindActivity"
             android:launchMode="singleTask" />
         <activity android:name=".Setup1Activity" />
         <activity android:name=".Setup2Activity" />
@@ -42,6 +46,7 @@
         <activity android:name=".AToolsActivity" />
         <activity android:name=".AddressActivity" />
         <activity android:name=".DragViewActivity" />
+        <activity android:name=".CallSmsSafeActivity" />
 
         <receiver android:name="com.epan.mobilesafe.receiver.BootCompleteReceiver">
             <intent-filter android:priority="1000">
@@ -54,11 +59,12 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="com.epan.mobilesafe.service.GPSService"></service>
-        <service android:name="com.epan.mobilesafe.service.AddressService"></service>
-        <!--  下面是和超级管理员有关系的 -->
+        <service android:name="com.epan.mobilesafe.service.GPSService" />
+        <service android:name="com.epan.mobilesafe.service.AddressService" />
+        <service android:name="com.epan.mobilesafe.service.BlackNumService" />
+        <!-- 下面是超级管理员相关 -->
         <receiver
-            android:name="com.epan.mobilesafe.receiver.Admin"
+            android:name=".receiver.Admin"
             android:description="@string/sample_device_admin_description"
             android:label="@string/sample_device_admin"
             android:permission="android.permission.BIND_DEVICE_ADMIN">

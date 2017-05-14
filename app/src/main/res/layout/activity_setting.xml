@@ -34,6 +34,14 @@
         epan:des_on="号码归属地显示开启"
         epan:title="号码归属地显示" />
 
+    <com.epan.mobilesafe.ui.SettingView
+        android:id="@+id/sv_blacknum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        epan:des_off="黑名单号码拦截关闭"
+        epan:des_on="黑名单号码拦截开启"
+        epan:title="黑名单号码拦截" />
+
     <com.epan.mobilesafe.ui.SettingClickView
         android:id="@+id/scv_location_bg"
         android:layout_width="match_parent"

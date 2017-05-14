@@ -12,6 +12,7 @@ import android.view.View.OnClickListener;
 
 import com.epan.mobilesafe.libs.StatusBarUtil;
 import com.epan.mobilesafe.service.AddressService;
+import com.epan.mobilesafe.service.BlackNumService;
 import com.epan.mobilesafe.ui.SettingClickView;
 import com.epan.mobilesafe.ui.SettingView;
 import com.epan.mobilesafe.untils.ServiceUtils;
@@ -24,6 +25,8 @@ public class SettingActivity extends Activity {
     private SettingView sv_update;
     @ViewInject(R.id.sv_address)
     private SettingView sv_address;
+    @ViewInject(R.id.sv_blacknum)
+    private SettingView sv_blacknum;
     @ViewInject(R.id.scv_location_bg)
     private SettingClickView scv_location_bg;
     @ViewInject(R.id.scv_change_location)
@@ -98,6 +101,32 @@ public class SettingActivity extends Activity {
     protected void onStart() {
         super.onStart();
         address();
+
+        blacknum();
+    }
+
+    private void blacknum() {
+        if (ServiceUtils.isServiceRunning("com.epan.mobilesafe.service.BlackNumService", this)) {
+            sv_blacknum.setChecked(true);
+        } else {
+            sv_blacknum.setChecked(false);
+        }
+        sv_blacknum.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), BlackNumService.class);
+                if (sv_blacknum.isChecked()) {
+                    // 停止服务
+                    stopService(intent);
+                    sv_blacknum.setChecked(false);
+                } else {
+                    //  开启服务
+                    startService(intent);
+                    sv_blacknum.setChecked(true);
+                }
+            }
+        });
     }
 
     private void address() {
